@@ -1,0 +1,24 @@
+/* styles.css */
+
+#id-second {
+    color: rgb(0, 0, 255);
+    font-size: 36px;
+}
+
+#id-fourth {
+    background-color: rgb(0, 255, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+.odd {
+    background-color: rgba(255, 0, 119, 0.692);
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+.large {
+    font-size: 24px;
+}
+
+
+
+    
