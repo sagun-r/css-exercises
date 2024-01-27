@@ -31,7 +31,7 @@ html {
 
 .sidebar {
   background-color: #ff7755;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span;
 }
 
 .nav {
@@ -51,5 +51,4 @@ html {
 
 .footer {
   background-color: #393f4d;
-  grid-column: 1 / span 2;
 }

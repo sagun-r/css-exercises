@@ -4,7 +4,10 @@
 }
 
 .container {
+  display: grid;
   text-align: center;
+  grid-template-columns: 1fr 4fr; /*The container element has two columns; The container's second column is 4 times larger than the first column */
+  gap: 4px; /*The container element has a gap of 4px*/
 }
 
 .container div {
@@ -16,45 +19,78 @@
 }
 
 .header {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /*The header element has two columns*/
   background-color: #393f4d;
+  grid-column: 1 / span 2; /*The header and footer span across both columns*/
+}
+
+.menu {
+  align-self: center;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .menu ul,
 .menu li {
+  list-style-type: none;
   font-size: 16px;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  display: grid;
+  background-color: #ff7755;
+  grid-row: 2 / span 2;
+  grid-column: 1; /*The sidebar only spans across the first column*/
+  gap: 50px; /*The sidebar element has a gap of 50px*/
 }
 
 .sidebar .photo {
+  display: grid;
   background-color: white;
   color: black;
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  align-items: center;
 }
 
-
 .sidebar .side-content {
+  display: grid;
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
+  align-items: center;
 }
 
 .nav {
-  background-color: #FF7755;
+  display: grid;
+  background-color: #ff7755;
+  grid-column: 2; /*The nav and article elements only span across the second column*/
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
+  list-style-type: none;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .article {
+  display: grid;
+  /*The article element should set grid columns using `repeat` along with the `auto-fit` and `minmax` properties; The article columns should have a minimum value of 250px and a maximum of 1fr unit*/
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px; /*The article element has a gap of 15px*/
   background-color: #bccbde;
+  grid-column: 2; /*The nav and article elements only span across the second column*/
 }
 
 .article p {
@@ -65,9 +101,10 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
+  height: 200px; /*The card elements inside the article container have a height of 200px*/
 }
 
 .card p {
@@ -83,9 +120,10 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / span 2; /*The header and footer span across both columns*/
 }
 
 .footer p {
   font-size: 13px;
-  font-weight: normal;  
+  font-weight: normal;
 }
